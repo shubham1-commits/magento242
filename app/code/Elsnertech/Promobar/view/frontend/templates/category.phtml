@@ -1,0 +1,22 @@
+<?php $collection = $block->getCrudCollection(); ?>
+<?php $collect = $block->getCategoryCollection(); ?>
+<?php foreach ($collection as $data): ?>
+    <?php $collectiondata = [];
+    $collectiondata = explode(",", $data->getCategory()); ?>
+    <?php if (in_array($collect, $collectiondata)): ?>
+ <div style="<?php if($data->getBgColor()){?>background-color:<?= /* @noEscape */ $data->getBgColor(); ?><?php } ?>; 
+
+    <?php if($data->getData('image')) {?>background:url(<?php echo $block->MediaUrl().$data->getData('image');?>)<?php } ?>;text-align: center;" width="100%" height="50" >
+
+    <div style="color:<?=/* @noEscape */ $data->getConentColor(); ?>;">
+      <?= /* @noEscape */ $data->getContent(); ?>
+         <a style="color:
+            <?= /* @noEscape */ $data->getUrlTextColor(); ?>"
+             href=<?= /* @noEscape */ $data->getUrlLink(); ?>> 
+             <?= /* @noEscape */ $data->getUrltext(); ?>
+               
+            </a>
+    </div>
+ </div>
+    <?php endif; ?>
+<?php endforeach; ?>

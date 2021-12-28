@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <referenceContainer name="header.container">
+     <block class="Elsnertech\Promobar\Block\Promobar" name="promobar-header" before="-" template="promobar.phtml">
+     </block>
+  </referenceContainer>
+  <referenceContainer name="sidebar.main">
+     <block class="Elsnertech\Promobar\Block\Promobar" name="promobar-left" before="-" template="promobarleft.phtml">
+     </block>
+  </referenceContainer>
+  <referenceContainer name="sidebar.additional">
+     <block class="Elsnertech\Promobar\Block\Promobar" name="promobar-right" before="-" template="promobarright.phtml">
+     </block>
+  </referenceContainer>
+  <referenceContainer name="main.content">
+     <block class="Elsnertech\Promobar\Block\Promobar" name="promobar-bottom-content" before="footer-container" template="promobar_bottom_content.phtml">
+     </block>
+  </referenceContainer>
+  <referenceContainer name="content">
+     <block class="Elsnertech\Promobar\Block\Promobar" name="promobar-top-content" before="product.info.main" template="promobar_top_content.phtml">
+     </block>
+  </referenceContainer>
+</page>

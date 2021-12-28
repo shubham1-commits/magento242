@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+        <!-- <referenceBlock name="product.info.review" remove="true"/> -->
+        <referenceContainer name="content">
+            <referenceBlock name="category.product.addto">
+                <block class="Elsnertech\Customization\Block\Faq"
+                       name="category.product.quickview"
+                       as="quickview"
+                       template="Elsnertech_Customization::sayhello.phtml"/>
+            </referenceBlock>
+        </referenceContainer>
+
+        <move element="page.main.title" destination="product.info.main" after="product.info.stock.sku"/>
+
+    </body>
+</page>

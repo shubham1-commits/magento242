@@ -1,0 +1,426 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+#url{
+    display: none;
+}
+
+#responce{
+    background-color: #122dff;
+    padding: 2px 4px 2px 4px;
+    margin-left: 32px;
+    color: white;
+    border-radius: 3px;
+    font-size: 22px;
+}
+
+.controller{
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding :2px 4px 2px 4px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  width: 370px;
+  /*border: 3px solid #f1f1f1;*/
+  z-index: 9;
+}
+
+.quick-replies {
+    flex-wrap: wrap;
+    bottom: 75px;
+    display: none;
+    justify-content: center;
+    padding: 0 25px;
+    margin: 10px 0;
+}
+
+/* Add styles to the form container */
+.form-container { 
+    min-width: 370px;
+    height: 500px;  
+    margin-bottom: 89px;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 25%);
+    border-radius: 15px;
+    background: #fff;
+    overflow: hidden;    
+}
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/*22-06-21*/
+.form-container p#pda {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    background: #f0f2f7;
+    height: 
+  }
+  
+.open-button{
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        -webkit-box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%);
+        box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%);
+        overflow: hidden;        
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        cursor: pointer;
+        padding: 0;
+        margin :0;
+  }
+ .bubble svg {
+    padding: 13px;    
+  }
+.form-container .top .avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 7px 0 rgb(0 0 0 / 15%);
+}
+.form-container .top .avatar img{
+   max-width: 60%;
+}
+.form-container .chat-popup {   
+     border: none;    
+}
+.form-container .header h1{
+  font-size: 22px;
+  margin: 0;
+  margin-left: 20px;
+  color: #fff;
+}
+.form-container .tpl-close{
+    width: 25px;
+    height: 25px;
+}
+.form-container .tpl-close svg {
+    width: 30px;
+    height: 30px;
+}
+.form-container .top {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(80deg,rgb(0, 128, 230), rgb(50, 192, 226) 130%);
+}
+
+
+
+.form-container .tpl-close.btn.cancel {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    background-color: transparent;    
+}
+
+.form-container a{
+  text-decoration: none;
+}
+/*.form-container #orderlist, #forgotpassword{
+  margin-top: 30px;
+}*/
+.form-container .controller {
+    font-size: 18px;
+    border-color: rgb(0, 108, 255);
+    color: rgb(0, 108, 255);
+    background: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    max-width: 100%;
+    margin: 4px;
+    height: 32px;
+    border: 1px solid;
+    border-radius: 16px;
+    padding: 4px 10px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+    display: inline-flex;
+    vertical-align: middle;   
+}
+.typing{
+    background: rgb(255, 255, 255);
+    border-top-color: rgb(234, 234, 234);
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-right: 20px;
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+}
+.send-icon {  
+    right: 20px;
+    width: 20px;
+    height: 20px;  
+}
+.typing input {
+    font-size: 16px;
+    line-height: 20px;
+    height: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0px;
+    flex: 1 0 0;
+    padding: 0 20px;
+    background: transparent;
+    border: 0;
+  }
+  textarea#output {
+    display: none;
+}
+.tpl-powered-by{
+   /* position: fixed;
+    bottom: 0;*/
+    border-top-color: rgb(238, 238, 238);
+    background: rgb(249, 249, 249);
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;   
+    user-select: none;   
+    display: flex;   
+    align-items: center;    
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+    height: 35px;
+    border-top-width: 1px;
+    border-top-style: solid;   
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.tpl-powered-by span{
+    color: rgb(155, 166, 178);
+}
+.tpl-powered-by span a{
+    color: rgb(18, 91, 251);
+}
+.chat-online-status{
+    border-radius: 100%;
+    position: absolute;
+    bottom: 7%;
+    right: 7%;
+    display: block;
+    width: 16%;
+    height: 16%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    background: rgb(105, 222, 64);
+}
+
+.sender-wrapper {
+    display: none;
+    justify-content: flex-end;
+} 
+p#sender,p#reci {
+    display: inline;
+    font-size: 16px;
+    line-height: 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
+    padding: 15px 17px;
+}
+
+.convo {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+
+pre {
+    background: unset;
+    border: none;
+    color: #111;
+    line-height: 1.42857143;
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 1.2rem;
+    display: block;
+    word-wrap: break-word;
+}
+
+.sender-wrapper {
+    width: 100%;
+    padding: 0 30px;
+    text-align: right;
+}
+
+p#sender {
+    background: rgb(0, 108, 255);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    border-radius: 20px 20px 5px 20px;
+}
+.reci-wrapper {
+    display: none;
+    padding: 0 61px 0 30px;
+}
+
+p#reci {
+    
+    background: #eae7e7;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    border-radius: 5px 20px 20px 20px;
+}
+
+/*.typing input:focus{
+  box-shadow: none;
+  outline: none;
+}
+select:not([disabled]):focus {    
+    box-shadow: none;*/
+/*22-06-21*/
+
+
+.cartform{
+    display: none;
+    background: grey;
+    width: 90%;
+}
+
+.cart{
+    width:90%;
+    height: 40%;
+    display: none;
+}
+/*05-07-21*/
+.chatbot-data-wrap{
+    overflow-x: hidden;
+    padding: 10px;
+}
+#mainform .msg-wrap{ 
+    margin-bottom: 25px;
+    margin-top: 10px;    
+    margin-top: 20px;   
+    border-radius: 20px;
+}
+#mainform .msg-wrap .newcustomer{
+    max-width: 330px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background: #1d0dbb08;
+}
+#mainform .msg-wrap .newcustomer input{
+  width: 80%;
+  margin-left: 20px;
+}
+#mainform .msg-wrap .newcustomer input{
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+#mainform .msg-wrap .newcustomer:placeholder{
+  color: red;
+}
+#mainform .convo .chatbot-data-wrap{
+   margin-bottom: 100px;
+}
+#mainform .msg-wrap .newcustomer input.newcustomer1{
+    background: #006bb4;
+    border: 1px solid #006bb4;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+  #mainform .reci-product{
+    background: #eae7e7;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    border-radius: 5px 20px 20px 20px;
+    margin: 0 61px 0 30px;
+  }
+   #mainform button.maincart1, button.wish {
+    width: 100%;
+    background: #fff;
+    border: 0;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 25%);
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+/*05-07-21*/

@@ -1,0 +1,279 @@
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Helper/Data.php
+-------------------------------------------------------------------------------
+FOUND 2 ERRORS AND 1 WARNING AFFECTING 2 LINES
+-------------------------------------------------------------------------------
+  7 | WARNING | Possible useless method overriding detected
+  7 | ERROR   | Comment block is missing
+ 12 | ERROR   | Comment block is missing
+-------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Model/Config.php
+------------------------------------------------------------------------------------------
+FOUND 11 ERRORS AFFECTING 8 LINES
+------------------------------------------------------------------------------------------
+ 37 | ERROR | [x] Missing short description
+ 37 | ERROR | [x] Missing short description
+ 38 | ERROR | [x] $storeManager, parameter is missing in method arguments signature
+ 38 | ERROR | [x] There must be exactly one blank line before tags
+ 38 | ERROR | [x] There must be exactly one blank line before tags
+ 39 | ERROR | [x] $scopeConfig, parameter is missing in method arguments signature
+ 40 | ERROR | [x] $backendModel, parameter is missing in method arguments signature
+ 41 | ERROR | [x] $transaction, parameter is missing in method arguments signature
+ 42 | ERROR | [x] $configValueFactory, parameter is missing in method arguments signature
+ 63 | ERROR | [ ] Comment block is missing
+ 68 | ERROR | [ ] Comment block is missing
+------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 9 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+------------------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Model/Config/Source/SnowFlakes.php
+--------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------------------------
+ 6 | ERROR | Comment block is missing
+--------------------------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Model/Config/Source/SnowmanPostion.php
+------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+------------------------------------------------------------------------------------------------------
+ 6 | ERROR | Comment block is missing
+------------------------------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Model/Config/Source/BallPostion.php
+---------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 6 | ERROR | Comment block is missing
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Model/Config/Source/SnowSpeed.php
+-------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-------------------------------------------------------------------------------------------------
+ 6 | ERROR | Comment block is missing
+-------------------------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Controller/Christmasfestive/Index.php
+-----------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------
+ 58 | ERROR | [x] Additional blank lines found at end of the annotation block
+-----------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/view/frontend/templates/christmasfestive/index.phtml
+--------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 6 WARNINGS AFFECTING 3 LINES
+--------------------------------------------------------------------------------------------------------------------
+ 19 | WARNING | Short echo tag syntax must be used; expected "<?=" but found "<?php echo"
+ 19 | WARNING | Unescaped output detected.
+ 24 | WARNING | Short echo tag syntax must be used; expected "<?=" but found "<?php echo"
+ 24 | WARNING | Unescaped output detected.
+ 35 | WARNING | Short echo tag syntax must be used; expected "<?=" but found "<?php echo"
+ 35 | WARNING | Unescaped output detected.
+--------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/view/frontend/templates/christmasfestive/snowflakes.phtml
+-------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 1 LINE
+-------------------------------------------------------------------------------------------------------------------------
+ 4 | WARNING | Short echo tag syntax must be used; expected "<?=" but found "<?php echo"
+ 4 | WARNING | Unescaped output detected.
+-------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/view/frontend/templates/christmasfestive/heddecorate.phtml
+--------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 12 WARNINGS AFFECTING 5 LINES
+--------------------------------------------------------------------------------------------------------------------------
+ 23 | WARNING | Short echo tag syntax must be used; expected "<?=" but found "<?php echo"
+ 23 | WARNING | Unescaped output detected.
+ 27 | WARNING | Short echo tag syntax must be used; expected "<?=" but found "<?php echo"
+ 27 | WARNING | Unescaped output detected.
+ 49 | WARNING | Short echo tag syntax must be used; expected "<?=" but found "<?php echo"
+ 49 | WARNING | Unescaped output detected.
+ 50 | WARNING | Short echo tag syntax must be used; expected "<?=" but found "<?php echo"
+ 50 | WARNING | Unescaped output detected.
+ 63 | WARNING | Short echo tag syntax must be used; expected "<?=" but found "<?php echo"
+ 63 | WARNING | Unescaped output detected.
+ 63 | WARNING | Short echo tag syntax must be used; expected "<?=" but found "<?php echo"
+ 63 | WARNING | Unescaped output detected.
+--------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Block/BaseBlock.php
+-------------------------------------------------------------------------------------------------------------
+FOUND 9 ERRORS AND 2 WARNINGS AFFECTING 8 LINES
+-------------------------------------------------------------------------------------------------------------
+ 27 | ERROR   | [x] Extra @param found in method annotation
+ 36 | ERROR   | [x] There must be exactly one blank line before tags
+ 36 | ERROR   | [x] Short description should not be in multi lines
+ 44 | ERROR   | [x] There must be exactly one blank line before tags
+ 44 | ERROR   | [x] Short description should not be in multi lines
+ 52 | ERROR   | [x] There must be exactly one blank line before tags
+ 62 | ERROR   | [x] There must be exactly one blank line before tags
+ 71 | ERROR   | [x] There must be exactly one blank line before tags
+ 71 | ERROR   | [x] Short description should not be in multi lines
+ 78 | WARNING | [ ] The use of function is_null() is discouraged; use strict comparison "=== null"() instead
+ 81 | WARNING | [ ] Direct use of $_SERVER Superglobal detected.
+-------------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 9 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-------------------------------------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Block/Init.php
+------------------------------------------------------------------------------
+FOUND 2 ERRORS AND 1 WARNING AFFECTING 3 LINES
+------------------------------------------------------------------------------
+  6 | ERROR   | [x] Missing short description
+  7 | ERROR   | [x] There must be exactly one blank line before tags
+ 16 | WARNING | [ ] Use ::class notation instead.
+------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Block/Context.php
+---------------------------------------------------------------------------------
+FOUND 8 ERRORS AFFECTING 7 LINES
+---------------------------------------------------------------------------------
+  35 | ERROR | [x] Method arguments visual alignment must be consistent
+  67 | ERROR | [x] $objectManager parameter is missing in method annotation
+  67 | ERROR | [x] $urlFactory parameter is missing in method annotation
+ 134 | ERROR | [x] There must be exactly one blank line before tags
+ 142 | ERROR | [x] There must be exactly one blank line before tags
+ 150 | ERROR | [x] There must be exactly one blank line before tags
+ 158 | ERROR | [x] There must be exactly one blank line before tags
+ 166 | ERROR | [x] There must be exactly one blank line before tags
+---------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 8 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+---------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Block/Christmasfestive/Heddecorate.php
+------------------------------------------------------------------------------------------------------
+FOUND 15 ERRORS AND 28 WARNINGS AFFECTING 38 LINES
+------------------------------------------------------------------------------------------------------
+  10 | ERROR   | Comment block is missing
+  17 | WARNING | Method name "Heddecorate::current_Date" is not in camel caps format
+  17 | ERROR   | Comment block is missing
+  19 | WARNING | Use ::class notation instead.
+  25 | ERROR   | Comment block is missing
+  27 | WARNING | Use ::class notation instead.
+  32 | ERROR   | Comment block is missing
+  34 | WARNING | Use ::class notation instead.
+  40 | ERROR   | Comment block is missing
+  42 | WARNING | Use ::class notation instead.
+  48 | WARNING | Method name "Heddecorate::header_Pattern" is not in camel caps format
+  48 | ERROR   | Comment block is missing
+  50 | WARNING | Use ::class notation instead.
+  53 | WARNING | The use of function basename() is discouraged
+  55 | WARNING | Use ::class notation instead.
+  56 | WARNING | Line exceeds 120 characters; contains 147 characters
+  60 | ERROR   | Comment block is missing
+  62 | WARNING | Use ::class notation instead.
+  67 | ERROR   | Comment block is missing
+  69 | WARNING | Use ::class notation instead.
+  75 | ERROR   | Comment block is missing
+  77 | WARNING | Use ::class notation instead.
+  83 | WARNING | Method name "Heddecorate::ball_Pattern" is not in camel caps format
+  83 | ERROR   | Comment block is missing
+  85 | WARNING | Use ::class notation instead.
+  88 | WARNING | The use of function basename() is discouraged
+  90 | WARNING | Use ::class notation instead.
+  91 | WARNING | Line exceeds 120 characters; contains 143 characters
+  95 | WARNING | Method name "Heddecorate::ball_Position" is not in camel caps format
+  95 | ERROR   | Comment block is missing
+  97 | WARNING | Use ::class notation instead.
+ 102 | ERROR   | Comment block is missing
+ 104 | WARNING | Use ::class notation instead.
+ 109 | ERROR   | Comment block is missing
+ 111 | WARNING | Use ::class notation instead.
+ 117 | ERROR   | Comment block is missing
+ 119 | WARNING | Use ::class notation instead.
+ 125 | WARNING | Method name "Heddecorate::santa_Pattern" is not in camel caps format
+ 125 | ERROR   | Comment block is missing
+ 127 | WARNING | Use ::class notation instead.
+ 130 | WARNING | The use of function basename() is discouraged
+ 132 | WARNING | Use ::class notation instead.
+ 133 | WARNING | Line exceeds 120 characters; contains 145 characters
+------------------------------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Block/Christmasfestive/Snowflakes.php
+-----------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AND 5 WARNINGS AFFECTING 6 LINES
+-----------------------------------------------------------------------------------------------------
+  9 | ERROR   | Comment block is missing
+ 16 | WARNING | Use ::class notation instead.
+ 19 | WARNING | Use ::class notation instead.
+ 22 | WARNING | Use ::class notation instead.
+ 26 | WARNING | Use ::class notation instead.
+ 29 | WARNING | Use ::class notation instead.
+-----------------------------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Block/Christmasfestive/Index.php
+------------------------------------------------------------------------------------------------
+FOUND 11 ERRORS AND 23 WARNINGS AFFECTING 27 LINES
+------------------------------------------------------------------------------------------------
+ 10 | ERROR   | Comment block is missing
+ 17 | WARNING | Method name "Index::current_Date" is not in camel caps format
+ 17 | ERROR   | Comment block is missing
+ 19 | WARNING | Use ::class notation instead.
+ 25 | ERROR   | Comment block is missing
+ 27 | WARNING | Use ::class notation instead.
+ 27 | WARNING | Line exceeds 120 characters; contains 143 characters
+ 31 | ERROR   | Comment block is missing
+ 33 | WARNING | Use ::class notation instead.
+ 33 | WARNING | Line exceeds 120 characters; contains 143 characters
+ 38 | ERROR   | Comment block is missing
+ 40 | WARNING | Use ::class notation instead.
+ 40 | WARNING | Line exceeds 120 characters; contains 137 characters
+ 45 | WARNING | Method name "Index::footer_Pattern" is not in camel caps format
+ 45 | ERROR   | Comment block is missing
+ 47 | WARNING | Use ::class notation instead.
+ 50 | WARNING | The use of function basename() is discouraged
+ 52 | WARNING | Use ::class notation instead.
+ 53 | WARNING | Line exceeds 120 characters; contains 147 characters
+ 57 | ERROR   | Comment block is missing
+ 59 | WARNING | Use ::class notation instead.
+ 64 | ERROR   | Comment block is missing
+ 66 | WARNING | Use ::class notation instead.
+ 72 | ERROR   | Comment block is missing
+ 74 | WARNING | Use ::class notation instead.
+ 80 | WARNING | Method name "Index::snowman_Pattern" is not in camel caps format
+ 80 | ERROR   | Comment block is missing
+ 82 | WARNING | Use ::class notation instead.
+ 85 | WARNING | The use of function basename() is discouraged
+ 87 | WARNING | Use ::class notation instead.
+ 88 | WARNING | Line exceeds 120 characters; contains 149 characters
+ 92 | WARNING | Method name "Index::snowman_Position" is not in camel caps format
+ 92 | ERROR   | Comment block is missing
+ 94 | WARNING | Use ::class notation instead.
+------------------------------------------------------------------------------------------------
+
+
+FILE: /var/www/html/magento241/app/code/Elsner/Christmasfestive/Block/DatePicker.php
+------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+------------------------------------------------------------------------------------
+ 13 | ERROR | [x] Missing short description
+ 14 | ERROR | [x] There must be exactly one blank line before tags
+ 27 | ERROR | [ ] Comment block is missing
+------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+------------------------------------------------------------------------------------
+
+

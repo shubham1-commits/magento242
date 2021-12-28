@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Elsner Team
+ * @copyright Copyright (c) 2021 Elsner Technologies Pvt. Ltd (https://www.elsner.com/)
+ * @package Elsnertech_Checkoutstep
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <!-- The new step you add -->
+                                        <item name="check-login-step" xsi:type="array">
+                                            <item name="component" xsi:type="string">Elsnertech_Checkoutstep/js/view/checkout-login-step</item>
+                                            <!--To display step content before shipping step "sortOrder" value should be < 1-->
+                                            <!--To display step content between shipping step and payment step  1 < "sortOrder" < 2 -->
+                                            <!--To display step content after payment step "sortOrder" > 2 -->
+                                            <item name="sortOrder" xsi:type="string">0</item>
+                                            <item name="children" xsi:type="array">
+                                                <item name="step-config" xsi:type="array">
+                                                    <item name="component" xsi:type="string">Elsnertech_Checkoutstep/js/view/authentication</item>
+                                                    <item name="displayArea" xsi:type="string">authentication</item>
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="errors" xsi:type="array">
+                                                            <item name="sortOrder" xsi:type="string">0</item>
+                                                            <item name="component" xsi:type="string">Elsnertech_Checkoutstep/js/view/authentication-messages</item>
+                                                            <item name="displayArea" xsi:type="string">messages</item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                        <item name="shipping-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="shippingAddress" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="before-form" xsi:type="array">
+                                                            <item name="component" xsi:type="string">Elsnertech_Checkoutstep/js/view/contant-info</item>
+                                                            <item name="displayArea" xsi:type="string">before-form</item>
+                                                            <item name="children" xsi:type="array">
+                                                                <!-- before form fields -->
+                                                            </item>
+                                                        </item>
+                                                        <item name="before-shipping-method-form" xsi:type="array">
+                                                            <item name="component" xsi:type="string">Elsnertech_Checkoutstep/js/view/contant-info</item>
+                                                            <item name="displayArea" xsi:type="string">before-shipping-method-form</item>
+                                                            <item name="children" xsi:type="array">
+                                                                <!-- before form fields -->
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                        <item name="billing-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="payment" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="afterMethods" xsi:type="array">
+                                                            <item name="component" xsi:type="string">Elsnertech_Checkoutstep/js/view/payment-select</item>
+                                                            <item name="displayArea" xsi:type="string">afterMethods</item>
+                                                            <item name="children" xsi:type="array">
+                                                                <!-- before form fields -->
+                                                            </item>
+                                                        </item>
+                                                        <item name="before-form" xsi:type="array">
+                                                            <item name="component" xsi:type="string">Elsnertech_Checkoutstep/js/view/contant-info</item>
+                                                            <item name="displayArea" xsi:type="string">before-form</item>
+                                                            <item name="children" xsi:type="array">
+                                                            </item>
+                                                        </item>
+                                                        <item name="payments-list" xsi:type="array">
+                                                            <item name="before-place-order" xsi:type="array">
+                                                                <item name="agreements" xsi:type="array">
+                                                                    <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                        <item name="review-step" xsi:type="array">
+                                            <item name="component" xsi:type="string">Elsnertech_Checkoutstep/js/view/checkout-review-step</item>
+                                            <item name="sortOrder" xsi:type="string">30</item>
+                                            <item name="children" xsi:type="array">
+                                                
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                                <item name="sidebar" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="summary" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="itemsBefore" xsi:type="array">
+                                                    <item name="sortOrder" xsi:type="string">5</item>
+                                                </item>
+                                                <item name="cart_items" xsi:type="array">
+                                                    <item name="sortOrder" xsi:type="string">10</item>
+                                                </item>
+                                                <item name="itemsAfter" xsi:type="array">
+                                                    <item name="sortOrder" xsi:type="string">15</item>
+                                                </item>
+                                                <item name="totals" xsi:type="array">
+                                                    <item name="sortOrder" xsi:type="string">20</item>
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="tax" xsi:type="array">
+                                                            <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                                <item name="agreements" xsi:type="array">
+                                                    <item name="component" xsi:type="string">Magento_CheckoutAgreements/js/view/checkout-agreements</item>
+                                                    <item name="sortOrder" xsi:type="string">100</item>
+                                                    <item name="displayArea" xsi:type="string">before-place-order</item>
+                                                    <item name="dataScope" xsi:type="string">checkoutAgreements</item>
+                                                    <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                </item>
+
+                                                <item name="additional-payment-validators" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="agreements-validator" xsi:type="array">
+                                                            <item name="component" xsi:type="string">Elsnertech_Checkoutstep/js/view/agreement/agreement-validation</item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                                <item name="place-button" xsi:type="array">
+                                                    <item name="component" xsi:type="string">Elsnertech_Checkoutstep/js/view/place-button</item>
+                                                    <item name="sortOrder" xsi:type="string">110</item>
+                                                    <item name="displayArea" xsi:type="string">place-button</item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                        <item name="payment-information" xsi:type="array">
+                                                <item name="component" xsi:type="string">Elsnertech_Checkoutstep/js/view/payment-information</item>
+                                                <item name="displayArea" xsi:type="string">payment-information</item>
+                                                <item name="children" xsi:type="array">
+                                            </item>
+                                        </item>
+                                        <item name="after-conetnt" xsi:type="array">
+                                            <item name="component" xsi:type="string">Elsnertech_Checkoutstep/js/view/contant-info</item>
+                                            <item name="sortOrder" xsi:type="string">150</item>
+                                            <item name="displayArea" xsi:type="string">after-conetnt</item>
+                                            <item name="children" xsi:type="array">
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                                <item name="authentication" xsi:type="array">
+                                    <item name="componentDisabled" xsi:type="boolean">true</item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Elsnertech_Chatboat::chatbot" title="Chatbot" module="Elsnertech_Chatboat" sortOrder="51" resource="Elsnertech_Chatboat::chatbot"/>
+        <add id="Elsnertech_Chatboat::post" title="New Customer" module="Elsnertech_Chatboat" sortOrder="10" action="chatbot/chatbot/index" resource="Elsnertech_Chatboat::chatbot" parent="Elsnertech_Chatboat::chatbot"/>
+
+         <add id="Elsnertech_Chatboat::chatbot_configuration" title="Configuration" module="Elsnertech_Chatboat" sortOrder="99" parent="Elsnertech_Chatboat::chatbot" action="adminhtml/system_config/edit/section/chatbot" resource="Elsnertech_Chatboat::chatbot_configuration"/>
+
+    </menu>
+</config>

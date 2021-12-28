@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+
+		<add id="Krishna_Feedback::helloworld" title="Feedback" module="Krishna_Feedback" sortOrder="51" resource="Mageplaza_HelloWorld::helloworld"/>
+        <add id="Krishna_Feedback::post" title="Feedback Form" module="Krishna_Feedback" sortOrder="10" action="feedback/post/index" resource="Krishna_Feedback::post" parent="Krishna_Feedback::helloworld"/>
+    </menu>
+</config>

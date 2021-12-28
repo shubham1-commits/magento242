@@ -1,0 +1,84 @@
+<!--Use 'stepCode' as id attribute-->
+<li data-bind="fadeVisible: isVisible, attr: { id: stepCode }">
+    <div id="checkout-step-title" class="step-content" data-role="content">
+        <!-- ko if: !isLogedIn -->
+        <div class="login-section block-section">
+            <!-- ko foreach: getRegion('authentication') -->
+            <!-- ko template: getTemplate() -->
+            <!-- /ko -->
+            <!--/ko-->
+        </div>
+        <div class="register-section block-section">
+            <div class="block-authentication">
+                <div class="block block-customer-login" data-bind="attr: {'data-label': $t('or')}">
+                    <div class="block-title" data-bind="i18n: 'Ich bin neu bei hair2heart'">
+                        <strong id="block-customer-login-heading" role="heading" aria-level="2" data-bind="i18n: 'Ich bin neu bei hair2heart'"></strong>
+                    </div>
+                    <div class="block-content" aria-labelledby="block-customer-login-heading">
+                        <div class="checkout-register">
+                            <p class="checkout-register-text" data-bind="i18n: 'Melde dich an und profitiere'">:</p>
+                            <ul class="checkout-register-list">
+                                <li data-bind="i18n: 'Persönliche Daten schnell und einfach verwalten'"></li>
+                                <li data-bind="i18n: 'Verfolge jederzeit deine Bestellungen'"></li>
+                                <li data-bind="i18n: 'Sichere dir mehrmals jährlich Rabatte für Stammkunden'"></li>
+                                </ul>
+                        </div>
+                    </div>
+                    <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+                        <div class="actions-toolbar">
+                            <div class="primary">
+                                <button data-role="opc-continue" type="submit" class="button action continue primary">
+                                    <span>
+                                        <!-- ko i18n: 'Konto erstellen'-->
+                                        <!-- /ko --></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="guest-section block-section">
+            <div class="block-authentication">
+                <div class="block block-customer-login" data-bind="attr: {'data-label': $t('or')}">
+                    <div class="block-title">
+                        <strong id="block-customer-login-heading" role="heading" aria-level="2" data-bind="i18n: 'Ohne Konto bestellen'"></strong>
+                    </div>
+                    <div class="block-content" aria-labelledby="block-customer-login-heading">
+                        <div class="checkout-guset">
+                            <p class="checkout-guset-text" data-bind="i18n: 'Gerne kannst du auch als Gast bestellen, ohne ein Konto zu eröffnen'"></p>
+                        </div>
+                    </div>
+                    <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+                        <div class="actions-toolbar">
+                            <div class="primary">
+                                <button data-role="opc-continue" type="submit" class="button action continue primary">
+                                    <span>
+                                        <!-- ko i18n: 'Als Gast bestellen'-->
+                                        <!-- /ko --></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: isLogedIn -->
+        <div class="login-section block-section">
+            <span class="counter-number" data-bind="text: navigateTo()"></span>
+            <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+                <div class="actions-toolbar">
+                    <div class="primary">
+                        <button data-role="opc-continue" type="submit" class="button action continue primary">
+                            <span>
+                                <!-- ko i18n: 'Als Gast bestellen'-->
+                                <!-- /ko --></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- /ko -->
+    </div>
+</li>

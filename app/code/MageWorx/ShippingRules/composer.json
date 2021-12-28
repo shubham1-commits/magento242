@@ -1,0 +1,35 @@
+{
+    "name": "mageworx/module-shippingrules",
+    "description": "Shipping Rules",
+    "require": {
+        "magento/module-backend": ">=100.1.0 < 103",
+        "magento/module-catalog": ">=100.1.0 < 105",
+        "magento/module-catalog-rule": ">=100.1.0 < 102",
+        "magento/module-checkout": ">=100.1.0 < 102",
+        "magento/module-customer": ">=100.1.0 < 104",
+        "magento/module-directory": ">=100.1.0 < 102",
+        "magento/module-eav": ">=100.1.0 < 103",
+        "magento/module-quote": ">=100.1.0 < 102",
+        "magento/module-rule": ">=100.1.0 < 102",
+        "magento/module-sales-rule": ">=100.1.0 < 102",
+        "magento/module-shipping": ">=100.1.0 < 101",
+        "magento/module-store": ">=100.1.0 < 102",
+        "magento/module-ui": ">=100.1.0 < 102",
+        "psr/log": "*",
+        "zendframework/zend-stdlib": "*"
+    },
+    "type": "magento2-module",
+    "version": "2.10.4",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MageWorx\\ShippingRules\\": ""
+        }
+    }
+}

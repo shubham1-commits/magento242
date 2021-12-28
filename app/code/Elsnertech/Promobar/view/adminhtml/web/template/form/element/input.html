@@ -1,0 +1,30 @@
+<!-- <input type="text"
+    data-bind="
+        event: {change: userChanges},
+        value: value,
+        hasFocus: focused,
+        valueUpdate: valueUpdate,
+        attr: {
+            name: inputName,
+            placeholder: placeholder,
+            'aria-describedby': noticeId,
+            id: custom,
+            disabled: disabled,
+            class: 'admin__control-text ' + $data.classes
+    }"
+    /> -->
+
+    <input class="item_url_text_color" type="text" id="item_url_text_color" 
+       data-bind="
+        event: {change: userChanges},
+        value: value,
+        hasFocus: focused,
+        valueUpdate: valueUpdate,
+        afterRender: initColorPickerCallback,
+        attr: {
+            name: inputName,
+            placeholder: placeholder,
+            'aria-describedby': noticeId,
+            id: uid,
+            disabled: disabled
+    }"/>

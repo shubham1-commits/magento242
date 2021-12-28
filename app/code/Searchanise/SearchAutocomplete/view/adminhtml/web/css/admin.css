@@ -1,0 +1,7 @@
+#snize_container .nav {
+    display: block;
+}
+
+#snize_container.snize .hidden {
+    visibility: initial;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="zohoinventory_sync_listing_data_source" xsi:type="string">Magento\Customer\Model\ResourceModel\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Magento\Customer\Model\ResourceModel\Grid\Collection2" type="Vendor\Module\Ui\Component\Listing\CustomerDataProvider">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">customer_entity</argument>
+            <argument name="resourceModel" xsi:type="string">Magento\Customer\Model\ResourceModel\Customer</argument>
+        </arguments>
+    </virtualType>  
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="zohoinventory_syncorder_listing_data_source" xsi:type="string">Elsnertech\Zohointegration\Model\ResourceModel\SalesOrder1\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Elsnertech\Zohointegration\Model\ResourceModel\SalesOrder1\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">sales_order</argument>
+            <argument name="resourceModel" xsi:type="string">Elsnertech\Zohointegration\Model\ResourceModel\SalesOrder1</argument>
+        </arguments>
+    </virtualType>
+
+<!--  -->
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="zohoinventory_syncproduct_listing_data_source" xsi:type="string">Elsnertech\Zohointegration\Model\ResourceModel\CatalogProduct\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Elsnertech\Zohointegration\Model\ResourceModel\CatalogProduct\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">catalog_product_entity</argument>
+            <argument name="resourceModel" xsi:type="string">Elsnertech\Zohointegration\Model\ResourceModel\CatalogProduct</argument>
+        </arguments>
+    </virtualType>
+
+
+
+</config>
+

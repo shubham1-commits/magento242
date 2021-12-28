@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+    <referenceContainer name="content">
+        <block class="Magento\Catalog\Block\Product\View" name="custom.product.view" template="Magento_Catalog::product/customview.phtml" before="-"/>
+    </referenceContainer>
+    <referenceContainer name="product.info.main" remove="true"></referenceContainer>
+    <!-- <referenceContainer name="product.info.media"></referenceContainer> -->
+    <!-- <referenceContainer name="product.info.details" remove="true"></referenceContainer> -->
+    <!-- <referenceBlock name="page.main.title" remove="true" /> -->
+    <!-- <referenceBlock name="catalog.product.related" remove="true" /> -->
+
+    
+    <move element="custom.product.view" destination="page.main.title" before="-"/> 
+
+
+</body>
+</page>

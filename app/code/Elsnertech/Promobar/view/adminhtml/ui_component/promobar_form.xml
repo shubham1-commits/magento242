@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+   <argument name="data" xsi:type="array">
+      <item name="js_config" xsi:type="array">
+         <item name="provider" xsi:type="string">promobar_form.promobar_form_data_source</item>
+         <item name="deps" xsi:type="string">promobar_form.promobar_form_data_source</item>
+      </item>
+      <item name="label" xsi:type="string" translate="true">General Information</item>
+      <item name="config" xsi:type="array">
+         <item name="dataScope" xsi:type="string">data</item>
+         <item name="namespace" xsi:type="string">promobar_form</item>
+      </item>
+      <item name="spinner" xsi:type="string">general_information</item>
+      <item name="buttons" xsi:type="array">
+         <item name="back" xsi:type="string">Elsnertech\Promobar\Block\Adminhtml\Index\Edit\Button\Back</item>
+         <item name="save" xsi:type="string">Elsnertech\Promobar\Block\Adminhtml\Index\Edit\Button\Save</item>
+      </item>
+      <item name="template" xsi:type="string">templates/form/collapsible</item>
+   </argument>
+  
+   
+   <dataSource name="promobar_form_data_source">
+      <argument name="dataProvider" xsi:type="configurableObject">
+         <argument name="class" xsi:type="string">Elsnertech\Promobar\Model\DataProvider</argument>
+         <argument name="name" xsi:type="string">promobar_form_data_source</argument>
+         <argument name="primaryFieldName" xsi:type="string">id</argument>
+         <argument name="requestFieldName" xsi:type="string">id</argument>
+         <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+               <item name="submit_url" xsi:type="url" path="*/*/save" />
+            </item>
+         </argument>
+      </argument>
+      <argument name="data" xsi:type="array">
+         <item name="js_config" xsi:type="array">
+            <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+         </item>
+      </argument>
+   </dataSource>
+   <fieldset name="general_information">
+      <argument name="data" xsi:type="array">
+         <item name="config" xsi:type="array">
+            <item name="collapsible" xsi:type="boolean">true</item>
+            <item name="opened" xsi:type="boolean">true</item>
+            <item name="label" xsi:type="string" translate="true">General Information</item>
+            <item name="sortOrder" xsi:type="number">20</item>
+         </item>
+      </argument>
+      <field name="title">
+         <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+               <item name="dataType" xsi:type="string">text</item>
+               <item name="label" xsi:type="string" translate="true">Title</item>
+               <item name="formElement" xsi:type="string">input</item>
+               <item name="source" xsi:type="string">title</item>
+               <item name="dataScope" xsi:type="string">title</item>
+            </item>
+         </argument>
+      </field>
+      <field name="status">
+         <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+               <item name="sortOrder" xsi:type="number">10</item>
+               <item name="dataType" xsi:type="string">boolean</item>
+               <item name="formElement" xsi:type="string">checkbox</item>
+               <item name="prefer" xsi:type="string">toggle</item>
+               <item name="label" xsi:type="string" translate="true">Status</item>
+               <item name="valueMap" xsi:type="array">
+                  <item name="true" xsi:type="number">1</item>
+                  <item name="false" xsi:type="number">0</item>
+               </item>
+               <item name="valuesForOptions" xsi:type="array">
+                  <item name="boolean" xsi:type="string">boolean</item>
+               </item>
+               <item name="default" xsi:type="number">1</item>
+               <item name="dataScope" xsi:type="string">status</item>
+            </item>
+         </argument>
+      </field>
+
+      
+        <field name="layout">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Elsnertech\Promobar\Model\Source\Options</item>
+                <item name="config" xsi:type="array">
+                    <item name="componentType" xsi:type="string">field</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string">Display Position</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="source" xsi:type="string">layout</item>
+                </item>
+            </argument>
+        </field> 
+        <field name="store_id">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Cms\Ui\Component\Listing\Column\Cms\Options</item>
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">int</item>
+                    <item name="label" xsi:type="string" translate="true">Store View</item>
+                    <item name="formElement" xsi:type="string">multiselect</item>
+                    <item name="source" xsi:type="string">page</item>
+                    <item name="dataScope" xsi:type="string">store_id</item>
+                    <item name="default" xsi:type="string">0</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        
+        <field name="priority">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                   <item name="dataType" xsi:type="string">integer</item>
+                   <item name="label" xsi:type="string" translate="true">Priority</item>
+                   <item name="formElement" xsi:type="string">input</item>
+                   <item name="source" xsi:type="string">priority</item>
+                   <item name="dataScope" xsi:type="string">priority</item>
+                </item>
+            </argument>
+        </field>
+        <field name="start_date" formElement="date">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="source" xsi:type="string">start_date</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="label" xsi:type="string" translate="true">Start Date</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="end_date" formElement="date">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="source" xsi:type="string">end_date</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="label" xsi:type="string" translate="true">End Date</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+      
+    </fieldset>
+    <fieldset name="Display">
+        <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Display</item>
+                    <item name="collapsible" xsi:type="boolean">true</item>
+                    <item name="opened" xsi:type="boolean">true</item>
+                </item>
+        </argument>
+        <field name="product_page">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Config\Model\Config\Source\Enabledisable</item>
+                <item name="config" xsi:type="array">
+                    <item name="componentType" xsi:type="string">field</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string">Display On Product Page</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="source" xsi:type="string">product_page</item>
+                </item>
+            </argument>
+        </field>
+        <!-- <field name="category">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Elsnertech\Promobar\Model\Source\CustmOptions</item>
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">int</item>
+                    <item name="label" xsi:type="string" translate="true">Category Page</item>
+                    <item name="formElement" xsi:type="string">multiselect</item>
+                    <item name="source" xsi:type="string">page</item>
+                    <item name="dataScope" xsi:type="string">category</item>
+                    <item name="default" xsi:type="string">2</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field> -->
+        <field name="category" component="Magento_Catalog/js/components/new-category" sortOrder="20" formElement="select">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="filterOptions" xsi:type="boolean">true</item>
+                <item name="multiple" xsi:type="boolean">true</item>
+                <item name="showCheckbox" xsi:type="boolean">true</item>
+                <item name="disableLabel" xsi:type="boolean">true</item>
+            </item>
+        </argument>
+        <settings>
+            <elementTmpl>ui/grid/filters/elements/ui-select</elementTmpl>
+            <label translate="true">Select Category</label>
+            <dataScope>data.category</dataScope>
+            <componentType>field</componentType>
+            <listens>
+                <link name="${ $.namespace }.${ $.namespace }:responseData">setParsed</link>
+            </listens>
+        </settings>
+        <formElements>
+            <select>
+                <settings>
+                    <options class="Magento\Catalog\Ui\Component\Product\Form\Categories\Options"/>
+                </settings>
+            </select>
+        </formElements>
+    </field>
+    </fieldset>
+
+
+   <fieldset name="Design">
+        <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="collapsible" xsi:type="boolean">true</item>
+                    <item name="label" xsi:type="string" translate="true">Design</item>
+                    <item name="opened" xsi:type="boolean">true</item>
+                </item>
+        </argument>
+        <field name="content"  formElement="wysiwyg" template="ui/form/field">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                   <!--   <item name="default" xsi:type="string">Some default value.</item> -->
+                        <item name="source" xsi:type="string">page</item>
+                    <item name="wysiwygConfigData" xsi:type="array">
+                        <item name="is_pagebuilder_enabled" xsi:type="boolean">false</item>
+                        <item name="toggle_button" xsi:type="boolean">true</item>
+                        <item name="height" xsi:type="string">200px</item>
+                        <item name="add_variables" xsi:type="boolean">true</item>
+                        <item name="add_widgets" xsi:type="boolean">true</item>
+                        <item name="add_images" xsi:type="boolean">true</item>
+                        <item name="add_directives" xsi:type="boolean">true</item>
+
+                    </item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Contents</label>
+                <dataScope>content</dataScope>
+             
+            </settings>
+            <formElements>
+                <wysiwyg>
+                    <settings>
+                        <rows>5</rows>
+                        <wysiwyg>true</wysiwyg>
+                    </settings>
+                </wysiwyg>
+            </formElements>
+         </field>
+        <field name="urltext">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                  <!--    <item name="default" xsi:type="string">Some default value.</item> -->
+                   <item name="template" xsi:type="string">ui/form/field</item>
+                   <item name="elementTmpl" xsi:type="string">Elsnertech_Promobar/form/element/urltext</item>
+                   <item name="label" xsi:type="string" translate="true">Url Text</item>
+                    <item name="labelVisible" xsi:type="boolean">true</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                   <item name="formElement" xsi:type="string">input</item>
+                   <item name="source" xsi:type="string">urltext</item>
+                   <item name="dataScope" xsi:type="string">urltext</item>
+                </item>
+            </argument>
+      </field>
+      <field name="url_link">
+         <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+               <item name="dataType" xsi:type="string">text</item>
+               <item name="label" xsi:type="string" translate="true">Url Link</item>
+               <item name="formElement" xsi:type="string">input</item>
+               <item name="source" xsi:type="string">url_link</item>
+               <item name="dataScope" xsi:type="string">url_link</item>
+            </item>
+         </argument>
+      </field>
+      <field name="conent_color">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="component" xsi:type="string">Elsnertech_Promobar/js/form/element/color-select</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="elementTmpl" xsi:type="string">Elsnertech_Promobar/form/element/content</item>
+                    <item name="label" xsi:type="string">conent_color</item>
+                    <item name="labelVisible" xsi:type="boolean">true</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">conent_color</item>
+                </item>
+            </argument>
+        </field>
+        <field name="bg_color">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="additionalClasses" xsi:type="string">my-custom-class</item>
+                    <item name="component" xsi:type="string">Elsnertech_Promobar/js/form/element/color-select</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="elementTmpl" xsi:type="string">Elsnertech_Promobar/form/element/bgcolor</item>
+                    <item name="label" xsi:type="string">Background Color</item>
+                    <item name="labelVisible" xsi:type="boolean">true</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">bg_color</item>
+                </item>
+            </argument>
+        </field>
+        <field name="url_text_color">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="component" xsi:type="string">Elsnertech_Promobar/js/form/element/color-select</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="elementTmpl" xsi:type="string">Elsnertech_Promobar/form/element/input</item>
+                    <item name="label" xsi:type="string">url_text_color</item>
+                    <item name="labelVisible" xsi:type="boolean">true</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">url_text_color</item>
+                </item>
+            </argument>
+        </field>
+
+
+
+<field formElement="imageUploader" name="icon" sortOrder="40" >
+    <argument name="data" xsi:type="array">
+        <item name="config" xsi:type="array">
+            <item name="source" xsi:type="string">Demo</item>
+        </item>
+    </argument>
+    <settings>
+        <elementTmpl>ui/form/element/uploader/image</elementTmpl>
+        <dataType>string</dataType>
+        <label translate="true">Image</label>
+        <visible>true</visible>
+        <validation>
+            <rule name="required-entry" xsi:type="boolean">true</rule>
+        </validation>
+    </settings>
+    <formElements>
+        <imageUploader>
+            <settings>
+                <required>true</required>
+                <uploaderConfig>
+                    <param xsi:type="url" name="url" path="elsnertech_promobar/feature_image/upload"/>
+                </uploaderConfig>
+                <previewTmpl>Codextblog_Imageupload/image-preview</previewTmpl>
+                <openDialogTitle>Media Gallery</openDialogTitle>
+                <allowedExtensions>jpg jpeg gif png</allowedExtensions>
+                <maxFileSize>4194304</maxFileSize>
+            </settings>
+        </imageUploader>
+    </formElements>
+</field>
+
+
+<!--     <field name="logo">
+   <argument name="data" xsi:type="array">
+       <item name="config" xsi:type="array">
+           <item name="dataType" xsi:type="string">string</item>
+           <item name="label" xsi:type="string" translate="true">Logo</item>
+           <item name="formElement" xsi:type="string">fileUploader</item>
+           <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+           <item name="previewTmpl" xsi:type="string">ui/form/element/uploader/preview</item>
+           <item name="sortOrder" xsi:type="number">10</item>
+           <item name="required" xsi:type="boolean">true</item>
+           <item name="allowedExtensions" xsi:type="string">jpg jpeg gif png svg</item>
+           <item name="uploaderConfig" xsi:type="array">
+               <item name="url" xsi:type="url" path="Elsnertech_Promobar/index/upload"/>
+           </item>
+           <item name="notice" xsi:type="string"><![CDATA[Allowed file types:jpg, jpeg, png.]]></item>
+       </item>
+   </argument>
+</field> -->
+
+        <field name="promobar_container">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="elementTmpl" xsi:type="string">Elsnertech_Promobar/form/element/promobar_container</item>
+                    <item name="formElement" xsi:type="string">textarea</item>
+                    <!-- <item name="cols" xsi:type="number">15</item>
+                    <item name="rows" xsi:type="number">5</item> -->
+                    <item name="label" translate="true" xsi:type="string">Textarea Field Example</item>
+                    <item name="dataType" translate="true" xsi:type="string">textarea</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="source" xsi:type="string">promobar_container</item>
+                    
+
+                </item>
+            </argument>
+        </field>
+
+
+
+
+        <container name="general_container">
+          <argument name="data" xsi:type="array">
+              <item name="config" xsi:type="array">
+                  <item name="sortOrder" xsi:type="string">100</item>
+              </item>
+          </argument>
+          <htmlContent name="html_content">
+              <argument name="block" xsi:type="object">Elsnertech\Promobar\Block\Adminhtml\Product\CustomTab</argument>
+          </htmlContent>
+      </container>
+   </fieldset>
+
+</form>

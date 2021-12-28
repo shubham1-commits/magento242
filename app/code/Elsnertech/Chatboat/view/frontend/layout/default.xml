@@ -1,0 +1,12 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+      <css src="Elsnertech_Chatboat::css/custom.css" />    
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <referenceContainer name="content">
+               <block class="Elsnertech\Chatboat\Block\Initialchatboat" name="chatboat_form" template="Elsnertech_Chatboat::index.phtml" cacheable="false"/>
+            </referenceContainer>
+        </referenceContainer>
+   </body>
+</page>

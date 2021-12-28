@@ -1,0 +1,23 @@
+<?php $collection = $block->getCrudCollection('page-bottom'); ?>
+<?php $storeid = $block->getStoreId(); ?>
+
+<?php if (count($collection) > 0) { ?>
+
+    <?php foreach ($collection as $data): ?>
+        <?php if ($data->getData('store_id') == $storeid): ?>
+<div style="<?php if($data->getBgColor()){?>background-color:<?= /* @noEscape */ $data->getBgColor(); ?><?php } ?>; 
+
+    <?php if($data->getData('image')) {?>background:url(<?php echo $block->MediaUrl().$data->getData('image');?>)<?php } ?>;text-align: center;"  >
+    <div style="color:<?= /* @noEscape */ $data->getConentColor(); ?>;">
+            <?= /* @noEscape */ $data->getContent(); ?>
+    <a style="color:<?= /* @noEscape */ $data->getUrlTextColor(); ?>;" href=
+            <?= /* @noEscape */ $data->getUrlLink(); ?>>
+            <?= /* @noEscape */ $data->getUrltext(); ?></a>
+    </div>
+ </div>
+<?php endif; ?>
+
+<?php endforeach; ?>
+<?php } ?>
+
+

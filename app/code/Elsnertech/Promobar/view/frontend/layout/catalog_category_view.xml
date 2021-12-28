@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <body>
+   <referenceContainer name="content.top.most">
+	    <container name="custom.block.sec" htmlTag="div" htmlClass="custom-class" before="-">
+	        <block class="Elsnertech\Promobar\Block\Category" name="promobar" template="Elsnertech_Promobar::category.phtml" />
+	    </container>
+    </referenceContainer>
+    <move element="custom.block.sec" destination="main.content" before="-"/>  
+   </body>       
+</page>

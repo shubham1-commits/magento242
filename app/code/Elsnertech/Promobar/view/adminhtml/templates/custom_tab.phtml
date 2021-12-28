@@ -1,0 +1,16 @@
+<?php $collection = $block->getCrudCollection(); ?>
+<div id="promobarContainer">
+ <div id="promo_bg_color" style="<?php if($collection->getBgColor()){?>background-color:<?=  $collection->getBgColor(); ?><?php } ?>;<?php if($collection->getData('image')) {?>background:url(<?php echo $block->MediaUrl().$collection->getData('image');?> )<?php } ?>;text-align: center;" width="100%" height="50" >
+     <div id="promo_content_color" class="ownclass" style="color:<?= /* @noEscape */ 
+     $collection->getConentColor() ?>;">
+        <?= /* @noEscape */ $collection->getContent() ?>
+            
+     </div>
+     <a id="promo_link_color" 
+               style="color:<?= /* @noEscape */ $collection->getUrlTextColor() ?>" 
+               href= <?= /* @noEscape */ $collection->getUrlLink() ?>   >
+                <?= /* @noEscape */ $collection->getUrltext() ?>
+            </a>
+ </div>
+
+</div>

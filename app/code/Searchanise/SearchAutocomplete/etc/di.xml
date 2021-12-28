@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">    
+    <!-- Searchanise search -->
+    <type name="\Magento\Catalog\Block\Product\ProductList\Toolbar">
+        <plugin name="searchanise_searchautocomplete_toolbar" type="Searchanise\SearchAutocomplete\Plugins\Toolbar" sortOrder="10" disabled="false" />
+    </type>
+    <preference for="Magento\CatalogSearch\Model\ResourceModel\Fulltext\Collection" type="Searchanise\SearchAutocomplete\Model\ResourceModel\Product\Fulltext\Collection" />
+    <virtualType name="Magento\CatalogSearch\Model\ResourceModel\Fulltext\CollectionFactory"
+                 type="Magento\Catalog\Model\ResourceModel\Product\CollectionFactory">
+        <arguments>
+            <argument name="instanceName" xsi:type="string">Searchanise\SearchAutocomplete\Model\ResourceModel\Product\Fulltext\Collection</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Magento\CatalogSearch\Model\ResourceModel\Fulltext\SearchCollection"
+                 type="Searchanise\SearchAutocomplete\Model\ResourceModel\Product\Fulltext\Collection">
+        <arguments>
+            <argument name="searchRequestName" xsi:type="string">quick_search_container</argument>
+        </arguments>
+    </virtualType>
+
+    <!-- Advanced Search Compatibility -->
+    <virtualType name="Magento\CatalogSearch\Model\ResourceModel\Advanced\CollectionFactory"
+                 type="Magento\Catalog\Model\ResourceModel\Product\CollectionFactory">
+        <arguments>
+            <argument name="instanceName" xsi:type="string">Searchanise\SearchAutocomplete\Model\ResourceModel\Product\Advanced\Collection</argument>
+        </arguments>
+    </virtualType>
+    <!-- End of Searchanise search -->
+
+    <!-- Product URL fix -->
+    <type name="Magento\Catalog\Model\Product\Url">
+        <plugin name="searchanise_searchautocomplete_product_url" type="Searchanise\SearchAutocomplete\Plugins\ProductUrl" sortOrder="10" disabled="false" />
+    </type>
+
+    <!-- Indexers -->
+    <type name="Magento\CatalogSearch\Model\Indexer\IndexerHandlerFactory">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="searchanise" xsi:type="string">catalogProductSearchIndexHandler</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="catalogProductSearchIndexHandler" type="Searchanise\SearchAutocomplete\Indexer\GenericIndexerHandler">
+        <arguments>
+            <argument name="indexName" xsi:type="string">catalog_product</argument>
+            <argument name="typeName" xsi:type="string">product</argument>
+        </arguments>
+    </virtualType>
+</config>

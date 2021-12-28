@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+
+        <add id="Elsnertech_Zohointegration::zoho" title="zoho sync" module="Elsnertech_Zohointegration" sortOrder="51" resource="Elsnertech_Zohointegration::zoho"/>
+            
+        <add id="Elsnertech_Zohointegration::productsync" title="Product sync" module="Elsnertech_Zohointegration" sortOrder="10" action="zohoinventory/sync/product" resource="Elsnertech_Zohointegration::product" parent="Elsnertech_Zohointegration::zoho"/>
+
+        <add id="Elsnertech_Zohointegration::customersync" title="customer sync" module="Elsnertech_Zohointegration" sortOrder="10" action="zohoinventory/sync/customer" resource="Elsnertech_Zohointegration::customersync" parent="Elsnertech_Zohointegration::zoho"/>
+
+        <add id="Elsnertech_Zohointegration::ordersync" title="Order sync" module="Elsnertech_Zohointegration" sortOrder="10" action="zohoinventory/sync/order" resource="Elsnertech_Zohointegration::ordersync" parent="Elsnertech_Zohointegration::zoho"/>
+
+        <add id="Elsnertech_Zohointegration::hello_configuration" title="Configuration" module="Elsnertech_Zohointegration" sortOrder="99" parent="Elsnertech_Zohointegration::zoho" action="adminhtml/system_config/edit/section/helloworld" resource="Elsnertech_Zohointegration::helloworld_configuration"/>
+
+    </menu>
+</config>

@@ -1,0 +1,13 @@
+{
+    "name": "mageworx/module-shippingrulesmeta",
+    "version": "2.10.4",
+    "type": "metapackage",
+    "require": {
+        "mageworx/module-shippingrules": "2.10.4",
+        "mageworx/module-geoip": ">=2.2.0",
+        "mageworx/module-info": ">=1.0.0"
+    },
+    "suggest": {
+        "mageworx/module-shippingrules-product-stock-data": "~1.0 for correct rules validation with MSI"
+    }
+}

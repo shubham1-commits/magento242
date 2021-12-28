@@ -1,0 +1,1 @@
+/var/www/html/magento241/app/code/MageWorx/ShippingRules/view/frontend/web/js/checkout/view/shipping-rates-validation/general.js
